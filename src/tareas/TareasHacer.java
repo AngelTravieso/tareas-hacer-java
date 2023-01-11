@@ -18,27 +18,18 @@ public class TareasHacer {
                 opcion = sc.nextInt();
 
                 switch (opcion) {
-                    case Constantes.SALIR:
-                        // Cerrar consola (salida)
+                    case Constantes.SALIR -> // Cerrar consola (salida)
                         cerrarConsola(sc);
-                        break;
-                    case Constantes.AGREGAR:
-                        // Agregar Tarea
+                    case Constantes.AGREGAR -> // Agregar Tarea
                         agregarTarea();
-                        break;
-                    case Constantes.LISTAR:
-                        // Listar Tareas
+                    case Constantes.LISTAR -> // Listar Tareas
                         listarTareas();
-                        break;
-                    case Constantes.ACTUALIZAR:
-                        // Actualizar Tarea
+                    case Constantes.ACTUALIZAR -> // Actualizar Tarea
                         actualizarTarea();
-                        break;
-                    case Constantes.ELIMINAR:
-                        // Eliminar Tarea
+                    case Constantes.ELIMINAR -> // Eliminar Tarea
                         eliminarTarea();
-                        break;
-
+                    default -> // Opcion no valida
+                        System.out.println("Opcion no valida");
                 }
 
             } catch (InputMismatchException ex) {
@@ -46,7 +37,7 @@ public class TareasHacer {
 
             }
 
-        } while (opcion < 0);
+        } while (opcion < 0 || opcion > 4);
 
     }
 
@@ -88,13 +79,3 @@ public class TareasHacer {
         System.out.println("eliminando");
     }
 }
-
-/**
- * Gestion de Tareas
- *
- * 1. Agregar Tarea 2. Listar Tareas 3. Actualizar Tarea 4. Eliminar Tarea 0.
- * Salir
- */
-/**
- * Tarea (Descripcion, Status)
- */
