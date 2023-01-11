@@ -1,6 +1,7 @@
 package tareas;
 
 import java.util.*;
+import constants.Constantes;
 
 public class TareasHacer {
 
@@ -17,23 +18,23 @@ public class TareasHacer {
                 opcion = sc.nextInt();
 
                 switch (opcion) {
-                    case 0:
+                    case Constantes.SALIR:
                         // Cerrar consola (salida)
                         cerrarConsola(sc);
                         break;
-                    case 1:
+                    case Constantes.AGREGAR:
                         // Agregar Tarea
                         agregarTarea();
                         break;
-                    case 2:
+                    case Constantes.LISTAR:
                         // Listar Tareas
                         listarTareas();
                         break;
-                    case 3:
+                    case Constantes.ACTUALIZAR:
                         // Actualizar Tarea
                         actualizarTarea();
                         break;
-                    case 4:
+                    case Constantes.ELIMINAR:
                         // Eliminar Tarea
                         eliminarTarea();
                         break;
