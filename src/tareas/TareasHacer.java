@@ -2,8 +2,11 @@ package tareas;
 
 import java.util.*;
 import constants.Constantes;
+import negocio.*;
 
 public class TareasHacer {
+
+    static IAccionesTarea acciones = new AccionesTareaImpl();
 
     public static void main(String[] args) {
 
@@ -21,13 +24,13 @@ public class TareasHacer {
                     case Constantes.SALIR -> // Cerrar consola (salida)
                         cerrarConsola(sc);
                     case Constantes.AGREGAR -> // Agregar Tarea
-                        agregarTarea();
+                        agregar();
                     case Constantes.LISTAR -> // Listar Tareas
-                        listarTareas();
+                        listar();
                     case Constantes.ACTUALIZAR -> // Actualizar Tarea
-                        actualizarTarea();
+                        actualizar();
                     case Constantes.ELIMINAR -> // Eliminar Tarea
-                        eliminarTarea();
+                        eliminar();
                     default -> // Opcion no valida
                         System.out.println("Opcion no valida");
                 }
@@ -60,22 +63,22 @@ public class TareasHacer {
     }
 
     // Agregar Tarea
-    public static void agregarTarea() {
+    public static void agregar() {
         System.out.println("agregando");
     }
 
     // Listar Tareas
-    public static void listarTareas() {
+    public static void listar() {
         System.out.println("listando");
     }
 
     // Actualizar Tarea
-    public static void actualizarTarea() {
+    public static void actualizar() {
         System.out.println("actualizando");
     }
 
     // Eliminar Tarea
-    public static void eliminarTarea() {
+    public static void eliminar() {
         System.out.println("eliminando");
     }
 }
